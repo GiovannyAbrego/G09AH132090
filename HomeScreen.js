@@ -4,23 +4,26 @@ import { TouchableHighlight } from 'react-native-gesture-handler';
 
 export default class HomeScreen extends React.Component{
     render(){
-        <View style={styles.container}>
-            <Text style={{ color: '#674', fontSize: 25, fontWeight: 'bold' }}>
-                MIS SITIOS ARQUEOLOGICOS
-            </Text>
-            <TouchableHighlight style={styles.botones} onPress={() => this.props.navigation.navigate('Web', { sitio: 'casablanca',})}>
-                <Text style={styles.texto}>CASA BLANCA</Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.botones} onPress={() => this.props.navigation.navigate('Web', { sitio: 'joyaceren', })}>
-                <Text style={styles.texto}>JOYA DE CEREN</Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.botones} onPress={() => this.props.navigation.navigate('Web', { sitio: 'sanandres', })}>
-                <Text style={styles.texto}>SAN ANDRES</Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.botones} onPress={() => this.props.navigation.navigate('Web', { sitio: 'local', })}>
-                <Text style={styles.texto}>WEB LOCAL</Text>
-            </TouchableHighlight>
-        </View>
+        return(
+            <View style={styles.container}>
+                <Text style={{ color: '#674', fontSize: 25, fontWeight: 'bold' }}>
+                    MIS SITIOS ARQUEOLOGICOS
+                </Text>
+                <TouchableHighlight style={styles.botones} onPress={() => this.props.navigation.navigate('Web', { sitio: 'casablanca', })}>
+                    <Text style={styles.texto}>CASA BLANCA</Text>
+                </TouchableHighlight>
+                <TouchableHighlight style={styles.botones} onPress={() => this.props.navigation.navigate('Web', { sitio: 'joyaceren', })}>
+                    <Text style={styles.texto}>JOYA DE CEREN</Text>
+                </TouchableHighlight>
+                <TouchableHighlight style={styles.botones} onPress={() => this.props.navigation.navigate('Web', { sitio: 'sanandres', })}>
+                    <Text style={styles.texto}>SAN ANDRES</Text>
+                </TouchableHighlight>
+                <TouchableHighlight style={styles.botones} onPress={() => this.props.navigation.navigate('Web', { sitio: 'local', })}>
+                    <Text style={styles.texto}>WEB LOCAL</Text>
+                </TouchableHighlight>
+            </View>
+        )
+        
     }
 }
 const styles = StyleSheet.create({
